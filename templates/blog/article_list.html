@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Articles</h1>
+    {% for article in articles %}
+    <table>
+        <tr>
+          <th>{{article.title}}</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>{{article.created_at}}</th>
+        </tr>
+      </table>
+    {% empty %}
+        <p>No hay articulos publicados</p>
+    {% endfor %}
+</body>
+</html>
