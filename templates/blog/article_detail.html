@@ -6,12 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-    {% block content %}
-    <p>¡Sesión finalizada!</p>
-
-    <a href="{% url 'Home'%}">Haga clic aquí para iniciar sesión nuevamente.</a>
-    {% endblock %}
-
+    <h1>{{article.title}}</h1>
+    <h2>{{article.created_at}}</h2>
+    <p>{{article.content}}</p>
 </body>
 </html>

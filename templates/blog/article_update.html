@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <form action="" method="post"> 
+            {% csrf_token %}
+            title{{form.title}}
+            <br>
+            content{{form.content}}
+            <button type="submit">Update</button>
+        </form>
+    {% else %}
+    <h2>Error 404: Not Found</h2>
+    {% endif %}
+</body>
+</html>
